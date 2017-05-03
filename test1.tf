@@ -28,14 +28,6 @@ resource "aws_emr_cluster" "emr-test-cluster" {
     env      = "env"
   }
 log_uri = "s3://emrbucket54/logs1"
-/*
-  bootstrap_action {
-    path = "s3://elasticmapreduce/bootstrap-actions/run-if"
-    name = "runif"
-    args = ["instance.isMaster=true", "echo running on master node"]
-  }
-*/
-#  configurations = "test-fixtures/emr_configurations.json"
 
 
   service_role = "arn:aws:iam::121492707555:role/EMR_DefaultRole"
